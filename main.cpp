@@ -10,12 +10,24 @@ static LSM6DSLSensor acc_gyro(&devI2c,0xD4,D4,D5); // high address
 
 float computeAngle(int x, int y, int z){
     float res = 0;
-//x,y,z calculation here in equation Ax1 = int x, Ay1 = int Y, Az1 = int Z, for squares, yxy (multiply) sqrt (squareroot) C atan/ need radians, type casting 
+    double computeAngle (double x, double y, double z);
+
     return res;
 }
 
-/* Simple main function */
+
 int main() {
+
+    double side1 = 5.0;
+    double side2 = 4.0;
+    double side3 = 3.0;
+
+    double angle = computeAngle(side1, side2, side3);
+
+    printf("Angle: %f degrees\n",angle);
+
+    return 0;
+
     uint8_t id;
     int32_t axes[3];
     float res=0;
